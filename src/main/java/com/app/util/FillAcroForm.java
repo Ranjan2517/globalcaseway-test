@@ -686,7 +686,6 @@ public class FillAcroForm {
                 String fullFieldName = entry.getKey();
                 PdfFormField field = entry.getValue();
                 // Print the field name
-                System.out.println("Field: " + fullFieldName);
                 String value = resolveField(fullFieldName.toLowerCase());
                 field.setValue(value);
             }

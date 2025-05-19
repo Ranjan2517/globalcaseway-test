@@ -22,7 +22,6 @@ public class PdfController {
 	) {
 	    try {
 	        byte[] filledPdfBytes = FillAcroForm.fillPdfWithDummyData(multipartFile.getBytes(), clientData1Json);
-           System.out.println("clientData1Json"+clientData1Json);
 	        return ResponseEntity.ok()
 	                .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"filled_uploaded.pdf\"")
 	                .contentType(MediaType.APPLICATION_PDF)
